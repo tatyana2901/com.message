@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>форма ввода слов</title>
+</head>
+<body>
+<form action="/getresult">
+
+  Введите комбинацию цифр для поиска секретного номера: <input type="number" name="comb" required>
+  <br>
+  Введите количество цифр секретного номера:  <input type="number" name="count" required>
+  <br>
+  <input type="submit" value="Отправить данные">
+
+</form>
+<br>
+<p th:if="${res!=null}" > Результат проверки комбинации цифр на содержание секретного кода показал: <span th:text="${res}"></span>  </p>
+
+
+
+</body>
+</html>
